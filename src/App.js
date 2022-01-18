@@ -6,11 +6,11 @@ import Navbar from './components/Navbar/Navbar';
 function App() {
   return (
     <div className="container">
-      <header className="HeadNavbar">
+      
                 
           <Navbar />
         
-      </header>
+       
     </div>
   );
 }
