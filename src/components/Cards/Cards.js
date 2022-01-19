@@ -1,5 +1,6 @@
 import "./Cards.css";
 import React from "react";
+import ItemCounter from "../Counter/ItemCounter";
 
 const Cards = ({ id, name, price, size }) => {
     return (
@@ -9,6 +10,9 @@ const Cards = ({ id, name, price, size }) => {
             <p>Nombre: {name}</p>
             <p>precio:{price}</p>
             <p>talla:{size}</p>
+            <div>
+                <ItemCounter />
+            </div>
         </div>
     );
 };

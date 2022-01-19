@@ -23,6 +23,7 @@ const ItemCounter = () => {
             <p>{count}</p>
             <button onClick={contar}>+</button>
             </div>
+            <button className="pushButton">Agregar</button>
         </div>
     );
 };
