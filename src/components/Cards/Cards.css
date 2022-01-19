@@ -1,7 +1,13 @@
-.CardsStyle{
-   
+.CardsStyle {
+    margin: 25px auto;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: black solid 2px;
+    border-radius: 13px;
 }
 
 h3 {
-    color: black
+    color: rgb(241, 132, 8);
 }

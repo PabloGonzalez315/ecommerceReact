@@ -1,16 +1,15 @@
 .navContainer {
     background-color: rgb(240, 184, 35);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
 }
 ul {
     list-style: none;
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    
 }
 
 li {
-    margin: 10px;
+    margin: 20px;
     padding: auto;
 }
