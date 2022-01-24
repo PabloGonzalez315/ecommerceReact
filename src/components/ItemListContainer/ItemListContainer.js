@@ -1,15 +1,17 @@
 import "./ItemListContainer.css";
 import React from "react";
 import ItemCounter from "../Counter/ItemCounter";
+import Item from "../Item/Item";
 
-const Cards = ({ id, name, price, size }) => {
+const ItemListContainer = ({ producto }) => {
+    console.log(producto);
     return (
         <div className="CardsStyle">
             <h3>Articulo</h3>
-            <p>ID: {id}</p>
-            <p>Nombre: {name}</p>
-            <p>precio:{price}</p>
-            <p>talla:{size}</p>
+            <p>ID: {producto.id}</p>
+            <p>Nombre: {producto.nombre}</p>
+            <p>precio:{producto.precio}</p>
+            <p>talla:{producto.Talla}</p>
             <div>
                 <ItemCounter />
             </div>
@@ -17,4 +19,4 @@ const Cards = ({ id, name, price, size }) => {
     );
 };
 
-export default Cards;
+export default ItemListContainer;

@@ -1,5 +1,6 @@
 import React, { useEffect, useState }from 'react';
 import { productos } from '../../baseDeDatos';
+import ItemListContainer from '../ItemListContainer/ItemListContainer';
 
 const getProductos = () => {
     return new Promise((resolve,reject) => {
@@ -21,14 +22,8 @@ function Item () {
     []);
     
     return (
-        <div>
-            {cargando ? (<p>Cargando...</p>) : (
-            productos.map((productos) => <Item key={productos.id} productos={productos} />
-            ))}
-        </div>
-
+        <div>{cargando ? <p>Cargando...</p> : productos.map((producto) => <ItemListContainer key={producto.id} producto={producto} />)}</div>
     );
 };
-
 
 export default Item;
