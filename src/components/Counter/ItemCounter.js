@@ -8,12 +8,12 @@ const ItemCounter = () => {
         setCount(count + 1);
     };
     const restar = () => {
+        if (count <= 0) {
+            return alert("No puedes tener una cantidad negativa");
+        }
+
         setCount(count - 1);
     };
-
-    if (count < 0) {
-        return <p className="error">No puedes tener una cantidad negativa</p>;
-    }
 
     return (
         <div className="titulo3">
