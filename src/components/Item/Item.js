@@ -3,9 +3,9 @@ import { productos } from '../../baseDeDatos';
 
 const getProductos = () => {
     return new Promise((resolve,reject) => {
-        SetTimeout(() => resolve(productos), 5000);
+        setTimeout(() => resolve(productos), 2000);
 });
-};[];
+};
 
 
 function Item () {
@@ -22,11 +22,8 @@ function Item () {
     
     return (
         <div>
-            <h1>vamosss coñooo</h1>
-            {cargando ? (
-            <p>Cargando...</p>
-            ) : (
-            productos.map((productos) => <item key={productos.id} productos={productos} />
+            {cargando ? (<p>Cargando...</p>) : (
+            productos.map((productos) => <Item key={productos.id} productos={productos} />
             ))}
         </div>
 
