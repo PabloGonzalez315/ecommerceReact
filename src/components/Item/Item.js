@@ -18,7 +18,7 @@ function Item () {
     .then((data) => setproductos(data))
     .catch((error) => console.error(error))
     .finally(() => setCargando(false));
- },
+},
     []);
     
     return (

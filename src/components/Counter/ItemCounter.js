@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./ItemCounter.css";
 
 const ItemCounter = () => {
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(1);
     const contar = () => {
         setCount(count + 1);
     };
