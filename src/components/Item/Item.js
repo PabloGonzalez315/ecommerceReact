@@ -1,29 +1,22 @@
-import React, { useEffect, useState }from 'react';
-import { productos } from '../../baseDeDatos';
-import ItemListContainer from '../ItemListContainer/ItemListContainer';
-
-const getProductos = () => {
-    return new Promise((resolve,reject) => {
-        setTimeout(() => resolve(productos), 2000);
-});
-};
+import "./Item.css";
+import ItemCounter from "../Counter/ItemCounter";
+import React from "react";
 
 
-function Item () {
-    const [productos, setproductos] = useState([]);
-    const [cargando, setCargando] = useState(false);
-    useEffect(() => {
-        setCargando(true);
-    getProductos()
-    .then((data) => setproductos(data))
-    .catch((error) => console.error(error))
-    .finally(() => setCargando(false));
-},
-    []);
-    
-    return (
-        <div>{cargando ? <p>Cargando...</p> : productos.map((producto) => <ItemListContainer key={producto.id} producto={producto} />)}</div>
+const Item = ({ producto }) => {
+        return (
+        <div className="CardsStyle">
+            <h3>Articulo</h3>
+            <p>ID: {producto.id}</p>
+            <p>Nombre: {producto.nombre}</p>
+            <p>precio:{producto.precio}</p>
+            <p>talla:{producto.Talla}</p>
+            <div>
+                <ItemCounter />
+            </div>
+        </div>
     );
 };
 
 export default Item;
+
