@@ -14,15 +14,13 @@ function App() {
                 <Routes>
                     <Route path="/">
                         <Route index element={<HomePage />} />
-                        <Route path="about" element={<AboutPage />}/>
-                        </Route> 
-                    <Route path="products">
-                    <Route index element={<ProductsPage />} />
-                    <Route path=":Id" element={<ProductDetailPage />} />
+                        <Route path="about" element={<AboutPage />} />
+                    </Route>
+                    <Route path="productos">
+                        <Route index element={<ProductsPage />} />
+                        <Route path=":Id" element={<ProductDetailPage />} />
                     </Route>
                 </Routes>
-
-                
             </div>
         </BrowserRouter>
     );
