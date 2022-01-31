@@ -1,6 +1,15 @@
 .navContainer {
+     display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(2, 0, 0);
+  padding: 1rem 2rem;
     background-color: rgb(240, 184, 35);
 }
+
+ span {
+    font-size: 1.5rem;
+  }
 ul {
     list-style: none;
     display: flex;
@@ -12,4 +21,9 @@ ul {
 li {
     margin: 20px;
     padding: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }

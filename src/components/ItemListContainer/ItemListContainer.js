@@ -2,7 +2,6 @@ import React from "react";
 import Item from "../Item/Item";
 import { useState, useEffect } from "react";
 import "./ItemListContainer.css";
-import { specialCharMap } from "@testing-library/user-event/dist/keyboard";
 
 const URL = "http://localhost:3001/productos";
 

@@ -1,13 +1,22 @@
+import { Link } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
 import "./Navbar.css";
 
 function Navbar() {
     return (
         <nav className="navContainer">
+            <span> MonkeyShoes </span>
             <ul>
-                <li>Nosotros</li>
-                <li>Tienda</li>
-                <li>Contacto</li>
+                <li>
+                    
+                    <Link to="/"> Home </Link>
+                </li>
+                <li>
+                    <Link to="/about"> About </Link>
+                </li>
+                <li>
+                    <Link to="/products"> Products</Link> 
+                </li>
                 <CartWidget />
             </ul>
         </nav>

@@ -1,14 +1,14 @@
 import React from 'react';
-import Item from '../Item/Item';
 
 const ItemDetail = ({Item}) => {
-  return 
+  return (
   <div>
     <h2>{Item.nombre}</h2>
-    <img src={Item.img} alt={Item.name} />
+    <img src={Item.img} alt={Item.nombre} />
     <p>{Item.descripcion}</p>
     <p>{Item.precio}</p>
-    </div>;
+    </div> )
+
 };
 
 export default ItemDetail;

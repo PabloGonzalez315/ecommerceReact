@@ -6,7 +6,6 @@ import React from "react";
 const Item = ({ producto }) => {
         return (
             <div className="CardsStyle">
-                <h3>Articulo</h3>
                 <p>ID: {producto.id}</p>
                 <p>Nombre: {producto.nombre}</p>
                 <p>
@@ -15,6 +14,7 @@ const Item = ({ producto }) => {
                 </p>
                 <p>talla:{producto.Talla}</p>
                 <img src={producto.img} alt="{producto.img}" className="imgProduct" />
+                <button className="pushButton">Ver Detalle</button>
 
                 <ItemCounter />
             </div>
