@@ -1,20 +1,17 @@
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
-import Item from "./components/Item/Item";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import ItemDetail from "./components/ItemDetailContainer/ItemDetail";
 
 function App() {
     return (
-        
-
-            <div className="container">
-                <Navbar />
+        <div className="container">
+            <Navbar />
+            
                 <ItemListContainer />
-                <Item />
-           
-                <Item />
-            </div>
-      
+              
+            
+        </div>
     );
 }
 

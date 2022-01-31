@@ -1,31 +1,68 @@
-{ "productos": [
-    {
-        "id": 1,
-        "nombre": "Zapatillas Jordan",
-        "precio": 15000,
-        "descripcion": "Zapatillas Jordan Air",
-        "Talla": 44
-    },
-    {
-        "id": 2,
-        "nombre": "Zapatillas Nike",
-        "precio": 11000,
-        "descripcion": "Zapatillas Nike",
-        "Talla": 42
-    },
-    {
-        "id": 3,
-        "nombre": "Zapatillas Lebron",
-        "precio": 18000,
-        "descripcion": "descripcion Zapatillas Lebron",
-        "Talla": 43
-    },
-    {
-        "id": 4,
-        "nombre": "Zapatillas Addidas",
-        "precio": 8000,
-        "descripcion": "descripcion Zapatillas Addidas",
-        "Talla": 41
-    }
-]
+{
+    "productos": [
+        {
+            "id": 1,
+            "nombre": "Zapatillas Jordan",
+            "precio": 15000,
+            "descripcion": "Zapatillas Jordan Air",
+            "Talla": 44,
+            "img": "https://essential.vteximg.com.br/arquivos/ids/446376-1000-1000/316-0006_1.jpg?v=637612784142230000"
+        },
+        {
+            "id": 2,
+            "nombre": "Zapatillas Nike",
+            "precio": 11000,
+            "descripcion": "Zapatillas Nike",
+            "Talla": 42,
+            "img": "https://www.moovbydexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw6018be7f/products/NI_CU9453-002/NI_CU9453-002-2.JPG"
+        },
+        {
+            "id": 3,
+            "nombre": "Zapatillas Lebron",
+            "precio": 18000,
+            "descripcion": "descripcion Zapatillas Lebron",
+            "Talla": 43,
+            "img": "https://www.moovbydexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwd8168679/products/NI_BV7427-001/NI_BV7427-001-2.JPG"
+        },
+        {
+            "id": 4,
+            "nombre": "Zapatillas Addidas",
+            "precio": 8000,
+            "descripcion": "descripcion Zapatillas Addidas",
+            "Talla": 41,
+            "img": "https://essential.vteximg.com.br/arquivos/ids/461203-1000-1000/261-2624_1.jpg?v=637650813161900000"
+        },
+        {
+            "id": 5,
+            "nombre": "Zapatillas Fila",
+            "precio": 19000,
+            "descripcion": "Zapatillas Fila Axilus Ace",
+            "Talla": 44,
+            "img": "https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwf2f438ba/products/FI_F01TN004169-1168/FI_F01TN004169-1168-2.JPG"
+        },
+        {
+            "id": 6,
+            "nombre": "Zapatillas Umbro",
+            "precio": 17500,
+            "descripcion": "Zapatillas Umbro Street Jogger",
+            "Talla": 42,
+            "img": "https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw4bc8817c/products/UB_0S74037-784/UB_0S74037-784-2.JPG"
+        },
+        {
+            "id": 7,
+            "nombre": "Zapatillas Wilson",
+            "precio": 22000,
+            "descripcion": "Zapatillas Wilson Pro Open",
+            "Talla": 43,
+            "img": "https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwfe405d49/products/WL_WRB01336/WL_WRB01336-2.JPG"
+        },
+        {
+            "id": 8,
+            "nombre": "Zapatillas Puma",
+            "precio": 13000,
+            "descripcion": "Zapatillas Puma R78 Adiprene",
+            "Talla": 41,
+            "img": "https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw4644732a/products/PU_381811-40/PU_381811-41-2.JPG"
+        }
+    ]
 }

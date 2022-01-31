@@ -1,5 +1,6 @@
 .CardsStyle {
-    margin: 25px auto;
+    margin: 15px ;
+    margin-top: 25px;
     width: 300px;
     justify-content: center;
     align-items: center;
@@ -10,4 +11,10 @@
 
 h3 {
     color: rgb(241, 132, 8);
+}
+
+.imgProduct {
+    width: 250px;
+    height: 250px;
+    
 }

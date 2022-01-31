@@ -1,0 +1,12 @@
+.containerList {
+  display: flex;
+ flex-wrap: wrap;
+ margin : 0 auto;
+ 
+}
+
+.tituloProductos {
+  text-align: center;
+  margin: 15px;
+  font-size: 2rem
+}
