@@ -1,0 +1,30 @@
+.ItemDetail {
+    margin: 30px;
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+}
+
+.ImgDetail{
+    width: 400px;
+}
+.ItemDetail-image {
+    text-align: center;
+
+}
+.ItemDetail-info {
+    margin-top: 60px;
+    text-align: center;
+    align-items: center;
+}
+
+.desciptionDetail {
+    font-size: 2rem;
+}
+
+.priceDetail {
+    font-size: 2rem;
+    color: red;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}

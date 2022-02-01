@@ -17,13 +17,13 @@ const ItemCounter = () => {
 
     return (
         <div className="titulo3">
-            <h4>Agregar</h4>
+            <h4></h4>
             <div className="contador">
             <button onClick={restar}>-</button>
             <p>{count}</p>
             <button onClick={contar}>+</button>
             </div>
-            <button className="pushButton">Agregar</button>
+            <button className="pushButton">Agregar al Carro</button>
         </div>
     );
 };

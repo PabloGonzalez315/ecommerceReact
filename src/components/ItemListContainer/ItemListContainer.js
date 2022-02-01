@@ -24,7 +24,7 @@ const ItemListContainer = () => {
     } else
         return (
             <div>
-                <h2 className="tituloProductos"> Lista de Productos</h2>
+                
                 <div className="containerList">
                     {productos.map((producto) => {
                         return <Item key={producto.id} producto={producto} />;

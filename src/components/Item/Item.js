@@ -7,18 +7,18 @@ import { useNavigate } from "react-router-dom";
 const Item = ({ producto }) => {
     const navigate = useNavigate();
         return (
-            <div className="CardsStyle">
-                <p>ID: {producto.id}</p>
+            <div className="card">
+                <img src={producto.img} alt="{producto.img}" className="imgProduct" />
                 <p>Nombre: {producto.nombre}</p>
-                <p>
+                <p className="price">
                     precio: {"$"}
                     {producto.precio}
                 </p>
                 <p>talla:{producto.Talla}</p>
-                <img src={producto.img} alt="{producto.img}" className="imgProduct" />
-                <button onClick={() => navigate(`/productos/${producto.id}`)} className="pushButton">Ver Detalle</button>
+                <p>ID: {producto.id}</p>
+                <button onClick={() => navigate(`/productos/${producto.id}`)}>Ver Detalle</button>
 
-                <ItemCounter />
+                
             </div>
         );
 };

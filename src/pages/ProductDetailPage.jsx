@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import React from "react";
+import ItemDetail from "../components/ItemDetailContainer/ItemDetail";
+
 
 const ProductDetailPage = () => {
     const { productId } = useParams();
@@ -18,12 +20,8 @@ const ProductDetailPage = () => {
 
   if (cargando || !producto) return <p>Cargando...</p>;
   return (
-      <div>
-          <h1>{producto.id}</h1>
-          <h1>{producto.nombre}</h1>
-          <img src={producto.img} alt={producto.nombre} />
-          <p>{producto.descripcion}</p>
-          <p>{producto.precio}</p>
+      <div className="contenedorItem">
+          <ItemDetail Item={producto} />
       </div>
   );
 };
