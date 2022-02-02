@@ -9,14 +9,13 @@ const Item = ({ producto }) => {
         return (
             <div className="card">
                 <img src={producto.img} alt="{producto.img}" className="imgProduct" />
-                <p>Nombre: {producto.nombre}</p>
+                <p>{producto.nombre}</p>
                 <p className="price">
                     precio: {"$"}
                     {producto.precio}
                 </p>
-                <p>talla:{producto.Talla}</p>
                 <p>ID: {producto.id}</p>
-                <button onClick={() => navigate(`/productos/${producto.id}`)}>Ver Detalle</button>
+                <button onClick={() => navigate(`/productos/${producto.id}`)} className="buttonList">Ver Detalle</button>
 
                 
             </div>

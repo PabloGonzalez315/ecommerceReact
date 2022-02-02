@@ -19,7 +19,9 @@ const HomePage = () => {
             <button onClick={goToProducts}>Ir a productos</button> */}
 
             <h1>Home</h1>
-            <button onClick={goToProducts}>Ir a la pagina de Productos </button>
+            <button onClick={goToProducts} className="pushButton">
+                Ir a la pagina de Productos
+            </button>
         </div>
     );
 };

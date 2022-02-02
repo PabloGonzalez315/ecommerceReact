@@ -19,9 +19,13 @@ const ItemCounter = () => {
         <div className="titulo3">
             <h4></h4>
             <div className="contador">
-            <button onClick={restar}>-</button>
-            <p>{count}</p>
-            <button onClick={contar}>+</button>
+                <button onClick={restar} className="pushButton">
+                    -
+                </button>
+                <p>{count}</p>
+                <button onClick={contar} className="pushButton">
+                    +
+                </button>
             </div>
             <button className="pushButton">Agregar al Carro</button>
         </div>

@@ -3,19 +3,24 @@
     display: flex;
     justify-content: space-around;
     justify-items: center;
+    align-items: center;
+    
 }
 
-.ImgDetail{
+.ImgDetail {
     width: 400px;
 }
 .ItemDetail-image {
     text-align: center;
-
 }
 .ItemDetail-info {
-    margin-top: 60px;
+    padding: 30px;
     text-align: center;
     align-items: center;
+    border-radius: 99px 0px 101px 0px;
+    -webkit-border-radius: 99px 0px 101px 0px;
+    -moz-border-radius: 99px 0px 101px 0px;
+    /* background:#63a63e; */
 }
 
 .desciptionDetail {
@@ -24,7 +29,22 @@
 
 .priceDetail {
     font-size: 2rem;
-    color: red;
+    color: rgb(240, 184, 35);
     font-weight: bolder;
     margin-bottom: 20px;
+}
+
+.sizeSelect {
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.textSize {
+    font-size: 1.2rem;
+}
+
+.sizeSelect {
+    color: black;
 }
