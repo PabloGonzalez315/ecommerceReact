@@ -5,36 +5,33 @@ import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ProductosPage from "./pages/ProductosPage";
 import ProductDetailPage from "./pages/ProductDetailPage";
+import CartPage from "./pages/CartPage";
+import { CartContext } from "./context/CartContext";
 
-
-
-/* const User_Data = {
-    nombre: "pablo",
-    email: "pablo.alejandro315@gmail.com",
-    password: "123456",
-    direccion: "calle falsa 123",
-    telefono: "123456789",
-}; */
 function App() {
-    return (
-       
-            <BrowserRouter>
-                <Navbar />
-                <div className="container">
-                    <Routes>
-                        <Route path="/">
-                            <Route index element={<HomePage />} />
-                            <Route path="about" element={<AboutPage />} />
-                        </Route>
-                        <Route path="productos">
-                            <Route index element={<ProductosPage />} />
-                            <Route path=":productId" element={<ProductDetailPage />} />
-                        </Route>
-                    </Routes>
-                </div>
-            </BrowserRouter> 
-    );
-        
+	
+	return (
+		<CartContext.Provider>
+			<BrowserRouter>
+				<Navbar />
+				<div className="container">
+					<Routes>
+						<Route path="/">
+							<Route index element={<HomePage />} />
+							<Route path="about" element={<AboutPage />} />
+						</Route>
+						<Route path="productos">
+							<Route index element={<ProductosPage />} />
+							<Route path=":productId" element={<ProductDetailPage />} />
+						</Route>
+						<Route path="cart">
+							<Route index element={<CartPage />} />
+						</Route>
+					</Routes>
+				</div>
+			</BrowserRouter>
+		</CartContext.Provider>
+	);
 }
 
 export default App;

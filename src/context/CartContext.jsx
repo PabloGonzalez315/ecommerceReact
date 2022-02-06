@@ -1,2 +1,3 @@
-/* import { createContext } from "react";
-export const userContext = createContext({}); */
+import { createContext } from "react";
+
+export const CartContext = createContext([]);
