@@ -1,5 +1,4 @@
 import "./Item.css";
-import ItemCounter from "../Counter/ItemCounter";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 

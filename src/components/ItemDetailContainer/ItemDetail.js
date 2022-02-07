@@ -1,12 +1,17 @@
-import React from "react";
+import React  from "react";
 import ItemCounter from "../Counter/ItemCounter";
 import "./ItemDetail.css";
 import ItemSizeSelect from "../ItemSizeSelect/ItemSizeSelect";
 import { useState } from "react";
+import { useCart } from "../../context/CartContext";
 
 const ItemDetail = ({ Item }) => {
+	const { cart, addItem } = useCart()
+	
     const [count, setCount] = useState(1);
     const addToCart = () => {
+		addItem(Item, count)
+		
         
     }
     

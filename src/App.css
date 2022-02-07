@@ -47,3 +47,16 @@ h1 {
     font-size: 3rem;
     margin-bottom: 20px;
 }
+
+.BoxCart {
+    text-align: center;
+    margin: 60px 0;
+    justify-content: center;
+    align-items: center;
+
+}
+.ImgCart {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
