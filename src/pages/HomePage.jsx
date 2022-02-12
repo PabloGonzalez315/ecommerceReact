@@ -11,13 +11,7 @@ const HomePage = () => {
     };
     return (
         <div className="homeP">
-            {/* <p>nombre: {nombre}</p>
-            <p>apellido: {apellido}</p>
-            <p>email: {email}</p>
-            <p>password: {password}</p>
-            <p>direccion: {direccion}</p>
-            <button onClick={goToProducts}>Ir a productos</button> */}
-
+           
             <h1>Home</h1>
             <button onClick={goToProducts} className="pushButton">
                 Ir a la pagina de Productos

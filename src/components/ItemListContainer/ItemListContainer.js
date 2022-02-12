@@ -2,20 +2,31 @@ import React from "react";
 import Item from "../Item/Item";
 import { useState, useEffect } from "react";
 import "./ItemListContainer.css";
+import { getFirestore } from "../../firebase";
 
-const URL = "http://localhost:3001/productos";
+/* const URL = "http://localhost:3001/productos"; */
 
 const ItemListContainer = () => {
 	const [productos, setproductos] = useState([]);
 	const [cargando, setCargando] = useState(false);
 	const [error] = useState(null);
 	useEffect(() => {
-		setCargando(true);
-		fetch(URL)
-			.then((resp) => resp.json())
-			.then((json) => setproductos(json))
-			.catch((error) => console.error(error))
-			.finally(() => setCargando(false));
+		const db = getFirestore();
+		const productosCollection = db.collection("productos");
+
+		const getDataFromFirestore = async () => {
+			setCargando(true);
+		const response = await productosCollection.get();
+		if (response.empty) {
+			console.log("no hay productos");
+		}
+		setproductos(response.docs.map((doc) => ({...doc.data(), id: doc.id})));
+		
+	};
+			
+		getDataFromFirestore();
+		setCargando(false);
+		
 	}, []);
 	if (cargando) {
 		return <div>Cargando...</div>;
