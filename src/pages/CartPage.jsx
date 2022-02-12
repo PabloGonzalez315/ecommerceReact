@@ -2,7 +2,7 @@ import React from "react";
 import { useCart } from "../context/CartContext";
 
 const CartPage = () => {
-	const { cart, removeItem, totalPrice,} = useCart();
+	const { cart, removeItem, totalPrice } = useCart();
 	return (
 		<div>
 			<h1>Carrito</h1>
@@ -23,11 +23,10 @@ const CartPage = () => {
 						<button onClick={() => removeItem(compra.Item.id)} className="pushButton">
 							Eliminar Articulo
 						</button>
-						<h3>Total de la compra: $ {totalPrice().toFixed(2)}</h3>
-						
 					</div>
 				);
 			})}
+			<h3 className="totalCompra">Total de la compra: $ {totalPrice().toFixed(2)}</h3>
 		</div>
 	);
 };

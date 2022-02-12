@@ -60,3 +60,9 @@ h1 {
     height: 100px;
     margin: 0 auto;
 }
+
+.totalCompra {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
