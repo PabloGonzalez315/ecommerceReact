@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import "./ItemListContainer.css";
 import { getFirestore } from "../../firebase";
 
-/* const URL = "http://localhost:3001/productos"; */
 
 const ItemListContainer = () => {
 	const [productos, setproductos] = useState([]);
