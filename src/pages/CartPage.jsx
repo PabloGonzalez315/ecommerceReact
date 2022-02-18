@@ -1,8 +1,34 @@
 import React from "react";
 import { useCart } from "../context/CartContext";
+import { useState } from "react";
+
 
 const CartPage = () => {
+	const [name, setName] = useState("");
+	const [phone, setPhone] = useState("");
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		console.log(name, phone);
+	};
 	const { cart, removeItem, totalPrice } = useCart();
+	const newOrder = {
+		buyer: {
+			name: "",
+			phone: "",
+		},
+		items : cart.map(item => {
+			return {
+				id: item.id,
+				quantity: item.quantity
+			}
+		}
+		),
+		total: {totalPrice}
+		
+
+	}
+	console.log(newOrder);
+
 	return (
 		<div>
 			<h1>Carrito</h1>
@@ -26,9 +52,38 @@ const CartPage = () => {
 					</div>
 				);
 			})}
-			<h3 className="totalCompra">Total de la compra: $ {totalPrice().toFixed(2)}</h3>
+			{/* <CartForm /> */}
+
+			
+		<div>
+			<h2>Introduzca sus datos:</h2>
+			<form onSubmit={handleSubmit}>
+				<label htmlFor="name">Nombre:</label>
+				<input
+					type="text"
+					id="name"
+					name="name"
+					placeholder="Escriba su nombre"
+					value={name}
+					onChange={(e) => setName(e.target.value)}
+				/>
+
+				<label htmlFor="phone">Teléfono:</label>
+				<input
+					type="number"
+					id="phone"
+					name="phone"
+					placeholder="Escriba su nombre"
+					value={phone}
+					onChange={(e) => setPhone(e.target.value)}
+				/>
+				<input type="submit" value="Finalizar Compra" />
+			</form>
+						
+		</div>
 		</div>
 	);
 };
+
 
 export default CartPage;
