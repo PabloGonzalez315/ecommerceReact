@@ -7,12 +7,11 @@ import ProductosPage from "./pages/ProductosPage";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import CartPage from "./pages/CartPage";
 import { CartProvider } from "./context/CartContext";
+import CheckoutPage from "./pages/CheckoutPage";
 
 function App() {
-	
 	return (
-		
-			<CartProvider>
+		<CartProvider>
 			<BrowserRouter>
 				<Navbar />
 				<div className="container">
@@ -28,11 +27,11 @@ function App() {
 						<Route path="cart">
 							<Route index element={<CartPage />} />
 						</Route>
+						<Route path="Checkout/:orderId" element={<CheckoutPage />} />
 					</Routes>
 				</div>
 			</BrowserRouter>
 		</CartProvider>
-		
 	);
 }
 

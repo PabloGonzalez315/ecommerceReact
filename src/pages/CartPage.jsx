@@ -2,9 +2,11 @@ import React from "react";
 import { useCart } from "../context/CartContext";
 import { useState } from "react";
 import { getFirestore } from "../firebase/index";
+import { useNavigate } from "react-router-dom";
 const CartPage = () => {
 	const [name, setName] = useState("");
 	const [phone, setPhone] = useState("");
+	let navigate = useNavigate();
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
@@ -16,7 +18,9 @@ const CartPage = () => {
 		const db = getFirestore();
 		db.collection("orders")
 			.add(newOrder)
-			.then((resp) => console.log("compra realizada con exito", resp.id))
+			.then((resp) => { console.log("compra realizada con exito", resp.id)
+		navigate(`/Checkout/${resp.id}`);
+		})
 			.catch((err) =>
 					console.log("error al realizar la compra", err));
 	};
