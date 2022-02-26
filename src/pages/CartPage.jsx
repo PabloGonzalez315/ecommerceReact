@@ -1,33 +1,36 @@
 import React from "react";
 import { useCart } from "../context/CartContext";
 import { useState } from "react";
-
-
+import { getFirestore } from "../firebase/index";
 const CartPage = () => {
 	const [name, setName] = useState("");
 	const [phone, setPhone] = useState("");
-	const handleSubmit = (e) => {
+
+	const handleSubmit = async (e) => {
 		e.preventDefault();
-		console.log(name, phone);
+		if (!name || !phone) {
+			alert("Por favor llene los campos para finalizar");
+			return false;
+		}
+		console.log(newOrder);
+		const db = getFirestore();
+		db.collection("orders")
+			.add(newOrder)
+			.then((resp) => console.log("compra realizada con exito", resp.id))
+			.catch((err) =>
+					console.log("error al realizar la compra", err));
 	};
+
 	const { cart, removeItem, totalPrice } = useCart();
+
 	const newOrder = {
 		buyer: {
-			name: "",
-			phone: "",
+			name,
+			phone,
 		},
-		items : cart.map(item => {
-			return {
-				id: item.id,
-				quantity: item.quantity
-			}
-		}
-		),
-		total: {totalPrice}
-		
-
-	}
-	console.log(newOrder);
+		items: cart,
+		total: totalPrice(),
+	};
 
 	return (
 		<div>
@@ -54,36 +57,32 @@ const CartPage = () => {
 			})}
 			{/* <CartForm /> */}
 
-			
-		<div>
-			<h2>Introduzca sus datos:</h2>
-			<form onSubmit={handleSubmit}>
-				<label htmlFor="name">Nombre:</label>
-				<input
-					type="text"
-					id="name"
-					name="name"
-					placeholder="Escriba su nombre"
-					value={name}
-					onChange={(e) => setName(e.target.value)}
-				/>
-
-				<label htmlFor="phone">Teléfono:</label>
-				<input
-					type="number"
-					id="phone"
-					name="phone"
-					placeholder="Escriba su nombre"
-					value={phone}
-					onChange={(e) => setPhone(e.target.value)}
-				/>
-				<input type="submit" value="Finalizar Compra" />
-			</form>
-						
-		</div>
+			<div>
+				<h2>Introduzca sus datos:</h2>
+				<form onSubmit={handleSubmit}>
+					<label htmlFor="name">Nombre</label>
+					<input
+						type="text"
+						id="name"
+						name="name"
+						placeholder="Escriba su nombre"
+						value={name}
+						onChange={(e) => setName(e.target.value)}
+					/>
+					<label htmlFor="phone">Teléfono</label>
+					<input
+						type="number"
+						id="phone"
+						name="phone"
+						placeholder="Escriba su teléfono"
+						value={phone}
+						onChange={(e) => setPhone(e.target.value)}
+					/>
+					<input type="submit" value="Finalizar compra" />
+				</form>
+			</div>
 		</div>
 	);
 };
-
 
 export default CartPage;
