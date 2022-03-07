@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 .App-logo {
@@ -65,4 +66,30 @@ h1 {
     font-size: 2rem;
     margin-bottom: 20px;
     text-align: center;
+}
+
+.checkOut {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 5px;
+}
+
+.imgProdMini {
+    height: 50px;
+}
+
+.carritoIcon {
+    color: #44c77f;
+    font-size: 36px;
+}
+
+.badgeCart {
+    padding: 3px;
+    margin-left: -10px;
+    margin-bottom: 30px;
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
 }

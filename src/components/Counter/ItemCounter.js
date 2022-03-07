@@ -29,5 +29,4 @@ const ItemCounter = ({ count, setCount }) => {
 		</div>
 	);
 };
-
 export default ItemCounter;

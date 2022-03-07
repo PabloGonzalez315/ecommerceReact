@@ -8,6 +8,7 @@ import ProductDetailPage from "./pages/ProductDetailPage";
 import CartPage from "./pages/CartPage";
 import { CartProvider } from "./context/CartContext";
 import CheckoutPage from "./pages/CheckoutPage";
+import "bootstrap/dist/css/bootstrap.css";
 
 function App() {
 	return (

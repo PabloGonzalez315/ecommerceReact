@@ -1,4 +1,6 @@
-import React  from "react";
+
+import Swal from "sweetalert2";
+import React from "react";
 import ItemCounter from "../Counter/ItemCounter";
 import "./ItemDetail.css";
 import ItemSizeSelect from "../ItemSizeSelect/ItemSizeSelect";
@@ -6,15 +8,20 @@ import { useState } from "react";
 import { useCart } from "../../context/CartContext";
 
 const ItemDetail = ({ Item }) => {
-	const { cart, addItem } = useCart()
-	
-    const [count, setCount] = useState(1);
-    const addToCart = () => {
-		addItem(Item, count)
-		
-        
-    }
-    
+	const { cart, addItem } = useCart();
+
+	const [count, setCount] = useState(1);
+	const addToCart = () => {
+		addItem(Item, count);
+		Swal.fire({
+			title: "Producto agregado!",
+			text: `Agregaste ${Item.descripcion}. Cantidad: ${count}`,
+			icon: "success",
+			confirmButtonText: "Aceptar",
+		});
+
+	};
+
 	return (
 		<div className="ItemDetail">
 			<div className="ItemDetail-image">
@@ -31,7 +38,9 @@ const ItemDetail = ({ Item }) => {
 					<ItemSizeSelect Item={Item} />
 				</div>
 				<ItemCounter count={count} setCount={setCount} />
-				<button className="pushButton" onClick={addToCart} >Agregar al Carro {count} Producto </button>
+				<button className="pushButton" onClick={addToCart}>
+					Agregar al Carro {count} Producto{" "}
+				</button>
 			</div>
 		</div>
 	);

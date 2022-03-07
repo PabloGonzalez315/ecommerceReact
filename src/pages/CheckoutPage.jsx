@@ -20,24 +20,23 @@ const CheckoutPage = () => {
 	}
 
 	return (
-		<div>
+		<div className="checkOut">
 			<h3>Gracias por su comra</h3>
 			<p> Detalles de su pedido: </p>
 			<p> Nombre: {order.buyer.name} </p>
 			<p> Telefono: {order.buyer.phone} </p>
 			<p> Total: {order.total} </p>
 			<p> Articulos: </p>
-			{/* <p>
-
-                {/* //no me anda me da error de key pero viene desde el cart como hago??// 
-				{order.items.map((item) => (
+			<p>
+				{order?.items.map((item) => (
 					<div key={item.id}>
-						<p> nombre:{item.name} </p>
+						<p> nombre:{item?.Item.nombre} </p>
 						<p> Cantidad: {item.quantity} </p>
-						<p> Precio: {item.precio} </p>
+						<p> Precio: {item?.Item.precio} </p>
+						<img src={item?.Item.img} alt={item?.Item.nombre} className="ImgDetail" />
 					</div>
 				))}
-			</p> */}
+			</p>
 		</div>
 	);
 };

@@ -3,6 +3,7 @@ import { useCart } from "../context/CartContext";
 import { useState } from "react";
 import { getFirestore } from "../firebase/index";
 import { useNavigate } from "react-router-dom";
+import CartForm from "../components/CartForm/CartForm";
 const CartPage = () => {
 	const [name, setName] = useState("");
 	const [phone, setPhone] = useState("");
@@ -18,14 +19,14 @@ const CartPage = () => {
 		const db = getFirestore();
 		db.collection("orders")
 			.add(newOrder)
-			.then((resp) => { console.log("compra realizada con exito", resp.id)
-		navigate(`/Checkout/${resp.id}`);
-		})
-			.catch((err) =>
-					console.log("error al realizar la compra", err));
+			.then((resp) => {
+				console.log("compra realizada con exito", resp.id);
+				navigate(`/Checkout/${resp.id}`);
+			})
+			.catch((err) => console.log("error al realizar la compra", err));
 	};
 
-	const { cart, removeItem, totalPrice } = useCart();
+	const { cart, addItem, removeItem, removeFromCart, totalPrice, sumTotal, clearCart } = useCart();
 
 	const newOrder = {
 		buyer: {
@@ -53,7 +54,7 @@ const CartPage = () => {
 						<img src={compra.Item.img} alt={compra.Item.nombre} className="ImgCart" />
 						<br />
 						{/* Eliminar productos del carrito */}
-						<button onClick={() => removeItem(compra.Item.id)} className="pushButton">
+						<button onClick={() => removeItem(compra?.Item.id)} className="pushButton">
 							Eliminar Articulo
 						</button>
 					</div>
@@ -61,31 +62,9 @@ const CartPage = () => {
 			})}
 			{/* <CartForm /> */}
 
-			<div>
-				<h2>Introduzca sus datos:</h2>
-				<form onSubmit={handleSubmit}>
-					<label htmlFor="name">Nombre</label>
-					<input
-						type="text"
-						id="name"
-						name="name"
-						placeholder="Escriba su nombre"
-						value={name}
-						onChange={(e) => setName(e.target.value)}
-					/>
-					<label htmlFor="phone">Teléfono</label>
-					<input
-						type="number"
-						id="phone"
-						name="phone"
-						placeholder="Escriba su teléfono"
-						value={phone}
-						onChange={(e) => setPhone(e.target.value)}
-					/>
-					<input type="submit" value="Finalizar compra" />
-				</form>
+			<CartForm cart={cart} sumTotal={sumTotal()} clearCart={clearCart}/>
 			</div>
-		</div>
+		
 	);
 };
 
