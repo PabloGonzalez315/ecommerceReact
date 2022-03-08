@@ -23,6 +23,7 @@ function Navbar() {
 						<CartWidget />
 					</Link>
 				</li>
+				
 			</ul>
 		</nav>
 	);

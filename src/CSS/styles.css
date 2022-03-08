@@ -1,3 +1,9 @@
 .imgProdMini {
     height: 50px !important
 }
+
+.badgeCart {
+    padding: 3px;
+    margin-left: -10px;
+    margin-bottom: 30px;
+}
