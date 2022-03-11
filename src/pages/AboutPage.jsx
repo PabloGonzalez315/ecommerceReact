@@ -1,7 +1,7 @@
 import React from "react";
-/* import { getFirestore } from "../firebase/index";
- */
-/* const productos = [
+import { getFirestore } from "../firebase/index";
+
+const productos = [
     
         {
             "nombre": "Zapatillas Jordan",
@@ -51,10 +51,10 @@ import React from "react";
             "descripcion": "Zapatillas Puma R78 Adiprene",
             "img": "https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw4644732a/products/PU_381811-40/PU_381811-41-2.JPG"
         }
-    ]; */
+    ]; 
 
 const AboutPage = () => {
-/*     const db = getFirestore();
+    const db = getFirestore();
     const collection = db.collection('productos');
 
     const creatreProductsFirestone = () => {
@@ -66,12 +66,12 @@ const AboutPage = () => {
 
         });
     };
-         */
+        
     return (
 			<div className="homeP">
 				<h1>About</h1>
-{/* 				<button onClick={creatreProductsFirestone}>Boton para agregar productos a firestore</button>
- */}			</div>
+				<button onClick={creatreProductsFirestone}>Boton para agregar productos a firestore</button>
+			</div>
 		);
 };
 

@@ -1,4 +1,3 @@
-
 import Swal from "sweetalert2";
 import React from "react";
 import ItemCounter from "../Counter/ItemCounter";
@@ -6,12 +5,15 @@ import "./ItemDetail.css";
 import ItemSizeSelect from "../ItemSizeSelect/ItemSizeSelect";
 import { useState } from "react";
 import { useCart } from "../../context/CartContext";
+import { Link } from "react-router-dom";
 
 const ItemDetail = ({ Item }) => {
 	const { cart, addItem } = useCart();
+	const [goToCart, setGoToCart] = useState(false);
 
 	const [count, setCount] = useState(1);
-	const addToCart = () => {
+
+		const addToCart = () => {
 		addItem(Item, count);
 		Swal.fire({
 			title: "Producto agregado!",
@@ -19,6 +21,7 @@ const ItemDetail = ({ Item }) => {
 			icon: "success",
 			confirmButtonText: "Aceptar",
 		});
+		setGoToCart(true);
 
 	};
 
@@ -37,9 +40,20 @@ const ItemDetail = ({ Item }) => {
 					<p className="textSize">Seleccionar Talla</p>
 					<ItemSizeSelect Item={Item} />
 				</div>
-				<ItemCounter count={count} setCount={setCount} />
+				{!goToCart ? (
+					<ItemCounter count={count} setCount={setCount} initial={1} onAdd={addToCart} />
+				) : (
+					<div className="d-flex justify-content-center">
+						<Link to={`/cart`}>
+							<button className="btn btn-warning bg-gradient me-3 mt-3">Ir al carrito</button>
+						</Link>
+						<Link to={`/productos`}>
+							<button className="btn btn-warning bg-gradient ms-3 mt-3">Seguir comprando</button>
+						</Link>
+					</div>
+				)}
 				<button className="pushButton" onClick={addToCart}>
-					Agregar al Carro {count} Producto{" "}
+					Agregar al Carro {count} Producto
 				</button>
 			</div>
 		</div>

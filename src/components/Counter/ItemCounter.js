@@ -1,7 +1,9 @@
 import React from "react";
 import "./ItemCounter.css";
+import { useCart } from "../../context/CartContext";
 
 const ItemCounter = ({ count, setCount }) => {
+	const { cart, addItem, removeItem, removeFromCart, totalPrice, sumTotal, clearCart } = useCart();
 	const contar = () => {
 		setCount(count + 1);
 	};
