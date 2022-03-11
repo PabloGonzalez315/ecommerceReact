@@ -1,3 +1,29 @@
+## Proyecto Final de React JS - Coderhouse
+E-commerce construido con React JS para el Proyecto Final de Coderhouse Comisión 25395.
+
+Dependencias Utilizadas hammer_and_wrench
+React JS [https://reactjs.org/]
+Firebase[https://firebase.google.com/]
+Font Awesome Icon [https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react]
+React Router DOM [https://v5.reactrouter.com/web/guides/quick-start]
+Bootstrap React [https://react-bootstrap.github.io/]
+Sweet Alert 2 [https://sweetalert2.github.io/]
+React Select [https://react-select.com/props] (En proceso de implementar.)
+
+_______________________________________________________________________________________________________________
+En caso de querer replicar el proyecto debes seguir estos pasos desde tu git :
+
+git clone https://github.com/PabloGonzalez315/ecommerceReact.git
+
+cd ecommerceReact
+
+npm install
+
+npm start
+
+Enjoy..
+
+Getting Started with Create React App
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
