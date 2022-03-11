@@ -2,12 +2,12 @@
 E-commerce construido con React JS para el Proyecto Final de Coderhouse Comisión 25395.
 
 Dependencias Utilizadas :computer:
-[React JS](https://reactjs.org/)
-[Firebase](https://firebase.google.com/)
-[Font Awesome Icon](https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react)
-[React Router DOM](https://v5.reactrouter.com/web/guides/quick-start)
-[Bootstrap React](https://react-bootstrap.github.io/)
-[Sweet Alert 2](https://sweetalert2.github.io/)
+[React JS](https://reactjs.org/)  
+[Firebase](https://firebase.google.com/)  
+[Font Awesome Icon](https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react)  
+[React Router DOM](https://v5.reactrouter.com/web/guides/quick-start)  
+[Bootstrap React](https://react-bootstrap.github.io/)  
+[Sweet Alert 2](https://sweetalert2.github.io/)  
 [React Select](https://react-select.com/props) (En proceso de implementar.)
 
 _______________________________________________________________________________________________________________
