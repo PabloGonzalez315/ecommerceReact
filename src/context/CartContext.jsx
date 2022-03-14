@@ -19,6 +19,7 @@ export const CartProvider = ({ children }) => {
 		});
 		console.log("se agrego al carrito", newItem);
 		setCart((prevState) => [...prevState, newItem]);
+		
 	};
 
 	 function addToCart(item) {

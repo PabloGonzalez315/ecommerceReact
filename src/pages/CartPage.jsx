@@ -1,43 +1,33 @@
 import React from "react";
 import { useCart } from "../context/CartContext";
-import { useState } from "react";
-import { getFirestore } from "../firebase/index";
-import { useNavigate } from "react-router-dom";
 import CartForm from "../components/CartForm/CartForm";
 import { Link } from "react-router-dom";
 import "../CSS/styles.css";
 const CartPage = () => {
-	const [name, setName] = useState("");
-	const [phone, setPhone] = useState("");
-	let navigate = useNavigate();
+	/* const [name, setName] = useState("");
+	const [phone, setPhone] = useState(""); */
+	
 
-	const handleSubmit = async (e) => {
+	/* const handleSubmit = async (e) => {
 		e.preventDefault();
 		if (!name || !phone) {
 			alert("Por favor llene los campos para finalizar");
 			return false;
-		}
-		console.log(newOrder);
-		const db = getFirestore();
-		db.collection("orders")
-			.add(newOrder)
-			.then((resp) => {
-				console.log("compra realizada con exito", resp.id);
-				navigate(`/Checkout/${resp.id}`);
-			})
-			.catch((err) => console.log("error al realizar la compra", err));
-	};
-
-	const { cart, addItem, removeItem, removeFromCart, totalPrice, sumTotal, clearCart } = useCart();
-
-	const newOrder = {
-		buyer: {
-			name,
-			phone,
-		},
-		items: cart,
-		total: totalPrice(),
-	};
+		} */
+		
+			
+			const { cart, removeItem,sumTotal, clearCart } = useCart();
+			
+			/* const newOrder = {
+				buyer: {
+					name,
+					phone,
+				},
+				items: cart,
+				total: totalPrice(),
+			}; */
+			
+		;
 
 	return (
 		<div>
