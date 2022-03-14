@@ -55,7 +55,7 @@ const CartForm = ({ clearCart, sumTotal, cart }) => {
 
 	return (
 		<Container className="formCarrito col-md-4">
-			<h3 className="text-center text-success titulos">Completá tus datos:</h3>
+			<h3 className="text-center text-success titulos">Completá tus datos para continuar la compra:</h3>
 			<Form id="formDatos" onSubmit={handleSubmit} onChange={handleChange}>
 				<Form.Group controlId="name">
 					<Form.Label>Nombre:</Form.Label>
